@@ -16,18 +16,18 @@ ENABLE_SSL = False
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-from sae.const import (MYSQL_HOST, MYSQL_HOST_S,
-    MYSQL_PORT, MYSQL_USER, MYSQL_PASS, MYSQL_DB
-)
+# from sae.const import (MYSQL_HOST, MYSQL_HOST_S,
+#     MYSQL_PORT, MYSQL_USER, MYSQL_PASS, MYSQL_DB
+# )
 
 DATABASES = {
     'default': {
-        'ENGINE':   'django.db.backends.mysql',
-        'NAME':     MYSQL_DB,
-        'USER':     MYSQL_USER, 
-        'PASSWORD': MYSQL_PASS,
-        'HOST':     MYSQL_HOST,
-        'PORT':     MYSQL_PORT,
+        'ENGINE':   'django.db.backends.postgresql_psycopg2',
+        'NAME':     'forum',
+        'USER':     'postgres',
+        'PASSWORD': 'postgres',
+        'HOST':     'localhost',
+        'PORT':     5432,
     }
 }
 
@@ -76,8 +76,6 @@ WSGI_APPLICATION = 'myforum.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
-
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/

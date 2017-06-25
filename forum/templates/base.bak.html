@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+        <meta name="author" content="Zues Team">
+        <meta name="copyright" content="2000-2050 Huawei Inc.">
+        <meta name="MSSmartTagsPreventParsing" content="True">
+        <meta http-equiv="MSThemeCompatible" content="Yes">
+        <title>生活论坛</title>
+
+        <!--<link href="/static/css/bootstrap.min.css" rel="stylesheet">-->
+        <!-- Bootstrap core CSS -->
+        <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <!--<link rel="icon" href="/static/img/favicon.ico">-->
+    </head>
+
+    <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">life forum</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    <!--<ul id="scarch_bar_type_menu" class="p_pop" style="display: none;">-->
+        <!--<li><a href="javascript:;" rel="forum" class="curtype">帖子</a></li>-->
+        <!--<li><a href="javascript:;" rel="user">用户</a></li>-->
+    <!--</ul>-->
+
+    <!-- 子导航 Start -->
+    <!--<div class="subnav">-->
+        <!--<div class="wrap">-->
+            <!--<div class="bo_nav clearfix" id="category">-->
+            <!--<ul>-->
+                <!--<li class="fast-tool"><a href="{% url 'post_create'%}">发帖</a></li>-->
+            <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="search" id="scarch_bar">
+    <form id="search_bar_form" method="get" autocomplete="off" onSubmit="searchFocus($(&#39;scarch_bar_txt&#39;))" action="{% url 'search' %}">
+        <div class="input">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+                    <tr>
+                        <td>
+                            <input id="scarch_bar_txt" name="srchtxt" type="text" dir="ltr" size="35" spellcheck="false" value="" autocomplete="off" x-webkit-speech="" speech="" class=" xg1" placeholder="请输入搜索内容">
+                        </td>
+                        <td width="40" align="right">
+                            <a href="javascript:;" id="scarch_bar_type" class="showmenu xg1 xs2" onClick="showMenu(this.id)" hidefocus="true">帖子</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <button type="submit" name="searchsubmit" id="searchsubmit" sc="1" class="button" value="true"><strong class="xi2 xs2">搜索</strong></button>
+
+    </form>
+    </div>
+      <div class="container">
+        <h1>Hello, world!</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; 2017 Company, Inc.</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+
+    <!--<div class="footer clearfix">-->
+        <!--<div class="wrap">-->
+            <!--<div class="nav">-->
+                <!--<a href="">手机版</a><span class="pipe">|</span>-->
+                <!--<a href="">Archiver</a><span class="pipe">|</span>-->
+                <!--<a href="">合作伙伴</a><span class="pipe">|</span>-->
+                <!--<a href="">@咸鱼论坛</a><span class="pipe">|</span>-->
+                <!--<a href="">@草榴社区</a><span class="pipe">|</span>-->
+                <!--<a href="" title="微软中国" target="_blank">微软中国</a>-->
+
+                <!--<script type="text/javascript" src="" charset="utf-8"></script>-->
+                <!--<script type="text/javascript" reload="1">pgvMain({"discuzParams":{"r2":"1558567","ui":0,"rt":"forum","md":"index","pn":1,"qq":"000","logo":9},"extraParams":""});</script>-->
+                <!--<script type="text/javascript" src=""></script>-->
+                <!--<img src="" border="0" width="1" height="1"><noscript>&lt;a href="http://www.linezing.com"&gt;&lt;img src="http://img.tongji.linezing.com/1042481/tongji.gif"/&gt;&lt;/a&gt;</noscript>-->
+            <!--</div>-->
+            <!--<div class="copyright">-->
+                <!--© 2000-2050 <strong><a href="" target="_blank">IOT510</a> </strong>-->
+
+                <!--<br>Powered by <a href="" target="_blank">huawei </a>-->
+
+                <!--( <a href="" target="_blank">ICP备10242048号-3 | B2-20170072</a> )-->
+
+                <!--<span id="debuginfo"></span>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+
+</body>
+</html>

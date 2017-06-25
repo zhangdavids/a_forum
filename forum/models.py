@@ -26,7 +26,7 @@ class LoginUser(AbstractUser):
     def checkfriend(self,username):
         if username in self.friends.all():
             return True
-	else:
+        else:
             return False
 
 class Nav(models.Model):
@@ -175,10 +175,11 @@ class Notice(models.Model):
     
     def __unicode__(self):
         return  u"%s的事件: %s" % (self.sender, self.description())
+
     def description(self):
-    	  if self.event:
-    	      return self.event.description()
-    	  return "No Event"
+        if self.event:
+          return self.event.description()
+        return "No Event"
         
     def reading(self):
         if not status:
